@@ -1,0 +1,2272 @@
+/*
+Chapter Grouping :
+1. FONT STYLE
+2. DEFAULT VALUE CSS
+3. GENERAL CUSTOM STYLE
+4. MOBILE VIEW CUSTOM STYLE
+5. SMALL DEVICE (LANDSCAPE PHONES, etc)
+6. TABLET VIEW CUSTOM STYLE
+7. RESPONSIVE NAVBAR DISPLAY STYLE
+8. DESKTOP VIEW CUSTOM STYLE
+9. HELPER FOCUS ACCESSIBILITY
+*/
+
+/* 1. FONT STYLES*/
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Nerko+One&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+/* 2. DEFAULT VALUE*/
+html {
+    display: block;
+}
+html:focus {
+    outline: none;
+}
+
+script {
+    display: none; 
+}
+
+head {
+    display: none;
+}
+
+header {
+    display: block;
+}
+
+title {
+    display: none;
+}
+body {
+    display: block;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body:focus {
+    outline: none;
+}
+
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-top: 0.83em;
+    margin-bottom: 0.83em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+p {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+nav {
+    display: block;
+}
+
+main {
+    min-height: 100vh;
+}
+
+article {
+    display: block;
+}
+
+section {
+    display: block;
+}
+
+div {
+    display: block;
+}
+
+footer {
+    display: block;
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    padding-inline-start: 20px;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: inline-block;
+}
+
+
+
+/*3. GENERAL CUSTOM STYLE*/
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background-color: #bf1722;
+    color: white;
+    padding: 8px;
+    z-index: 100;
+}
+
+.skip-link:focus {
+top: 0;
+}
+
+.img-responsive {
+    width: 100%;
+}
+
+.section-heading {
+    text-align: center;
+}
+
+.card {
+    margin: 10px 15px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 4px 17px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 4px 17px -1px rgba(0,0,0,0.75);
+    box-shadow: 0px 4px 17px -1px rgba(0,0,0,0.75);
+}
+
+i.fas {
+    margin-right: 5px;
+}
+
+.resto-desc {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+}
+
+.like {
+    font-size: 18px;
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    background-color: #db0000;
+    color: white;
+    border: 0;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.detail-content {
+    background-color: #F2D398;;
+}
+
+.list-category {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+.preloader .cover {
+    position: relative;
+    width: 70%;
+    left: 15%;
+}
+
+.customer-review {
+    margin-top: 10px;
+}
+
+.customer-review .name {
+    color: #99012c;
+    font-weight: bold;
+    margin: 0;
+}
+
+.customer-review .content {
+    margin: 0;
+}
+
+.search-form {
+    position: relative;
+    left: 25vw;
+    right: 25vw;
+    height: auto;
+    width: 50vw;
+}
+
+.search-form .search-query {
+    border-color: #99012c;
+    border-width: 0.5px;
+    width: 70%;
+    padding: 0.5em 0;
+    height: auto;
+    font-size: 19px;
+    border-radius: 5px;
+}
+
+.search-form .btn-search {
+    background-color: #99012c;
+    color: #F2D398;
+    padding: 0.5em 0.7em;
+    margin-left: 2%;
+    font-size: 19px;
+    width: 25%;
+    border-radius: 5px;
+    border: 0;
+}
+
+/* 4. MOBILE VIEW CUSTOM STYLE*/
+@media only screen and (max-width: 575.98px) {
+    .app-bar {
+    padding: 8px 16px;
+    background-color: #bf1722;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, auto);
+    gap: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    }
+    
+    .app-bar .app-bar-menu {
+    display: flex;
+    justify-content: center;
+    }
+    
+    .app-bar .app-bar-menu button {
+    background-color: transparent;
+    border: none;
+    font-size: 22px;
+    padding: 10px 15px;
+    cursor: pointer;
+    }
+    
+    .app-bar .app-bar-brand {
+    text-align: center;
+    }
+    
+    .app-bar .app-bar-brand h1 {
+    color: #db0000;
+    text-transform: uppercase;
+    font-size: 22px;
+    user-select: none;
+    text-align: center;
+    }
+
+    .app-bar .app-bar-brand .image-brand {
+        aspect-ratio: attr(width) / attr(height);
+    }
+    
+    .app-bar .app-bar-navigation {
+    position: absolute;
+    top: 150px;
+    left: -330px;
+    width: 300px;
+    transition: all 0.3s;
+    padding: 8px;
+    background-color: #F2D398;
+    overflow: hidden;
+    }
+    
+    .app-bar .app-bar-navigation.open {
+    left: 0;
+    top: 150px;
+    }
+
+    .app-bar .app-bar-navigation ul {
+        padding-inline-start: 0;
+    }
+    
+    .app-bar .app-bar-navigation ul li a {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    padding: 15px 8px;
+    margin-bottom: 5px;
+    width: 100%;
+    }
+    
+    /* Hero Image Section*/
+    .hero-section {
+        width: 100vw;
+        height: 50vh;
+        position: relative;
+    }
+
+    .hero-section img.cover {
+        height: 50vh;
+        object-fit: cover;
+        width: 100%;
+        position: absolute;
+    }
+
+    .hero-section .overlay-shadow {
+        width: 100%;
+        height: 20vh;
+        background-color: black;
+        background: linear-gradient(to top,  rgb(26, 26, 26) 0%, rgba(233, 233, 233, 0) 100%);
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0%;
+    }
+
+    .hero-section .title-hero {
+        color: rgb(254, 255, 211);
+        position: absolute;
+        left: 0.8em;
+        bottom: 1.8em;
+        font-size: 1.75em;
+    }
+
+    .hero-section .span-title {
+        color: rgb(254, 255, 211);
+        position: absolute;
+        left: 1.6em;
+        bottom: 2em;
+        font-size: 1em;
+    }
+
+    /* RESTAURANT LIST SECTION*/
+    .restaurants-section {
+        width: 100vw;
+        height: auto;
+    }
+
+    .restaurants-section .section-heading {
+        margin-top: 30px;
+        font-size: 20px;
+    }
+
+    .restaurants-section .restaurants-list {
+        margin: 10px 30px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, auto);
+    }
+
+    .restaurants-section .restaurants-list .card {
+        background-color: #F2D398;
+    }
+
+    .restaurants-section .restaurants-list .card-image {
+        position: relative;
+        width: 100%;
+    }
+    
+    .restaurants-section .restaurants-list .label {
+        position: absolute;
+        top: 10px;
+        left: 0;
+        width: 150px;
+        height: 50px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        background-color: #ffbd69;
+        text-align: center;
+        color: #000000;
+        font-weight: 600;
+    }
+
+    .restaurants-section .restaurants-list .card-text {
+        text-align: left;
+        width: auto;
+        padding: 0 20px;
+    }
+
+    .restaurants-section .restaurants-list .card-text a.resto-name {
+        padding: 15px 10px;
+        display: block;
+        text-align: center;
+        color: #c70039;
+        font-weight: 800;
+    }
+
+    .restaurants-section .restaurants-list .card-footer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, auto);
+    }
+
+    .restaurants-section .restaurants-list .card-footer .btn-add {
+        background-color: transparent;
+        color: #000000;
+        padding: 15px 5px;
+        margin: 15px;
+        border: none;
+    }
+
+    .restaurants-section .restaurants-list .card-footer .btn-love {
+        background-color: transparent;
+        color: #000000;
+        padding: 15px 5px;
+        margin: 15px;
+        border: none;
+    }
+
+    .restaurants-section .restaurants-list .card-footer i {
+        font-size: 19px;
+    }
+
+    /*Footer Custom*/
+    .footer {
+        height: auto;
+        text-align: center;
+        background-color: #111d5e;
+    }
+    
+    .footer p {
+        margin-block-start: 0;
+        margin-block-end: 0;
+        padding: 1.5em 0;
+        color: wheat;
+    }
+
+    /* Favourite Restaurant page*/
+    .search-form {
+        position: relative;
+        left: 5vw;
+        right: 5vw;
+        height: auto;
+        width: 90vw;
+    }
+    
+    .search-form .search-query {
+        border-color: #99012c;
+        border-width: 0.5px;
+        width: 70%;
+        padding: 0.5em 0;
+        height: auto;
+        font-size: 19px;
+        border-radius: 5px;
+    }
+    
+    .search-form .btn-search {
+        background-color: #99012c;
+        color: #F2D398;
+        padding: 0.5em;
+        margin-left: 2%;
+        font-size: 19px;
+        width: 25%;
+        border-radius: 5px;
+        border: 0;
+    }
+
+    .liked-page .content-heading {
+        color: #bf1722;
+        font-size: 1.5rem;
+        padding: 0.4em 2em;
+        font-weight: 700;
+        margin-top: 2em;
+        font-family: 'Dancing Script', cursive;
+        text-align: center;
+    }
+
+    .liked-page .restaurants-list {
+        margin: 10px 30px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, auto);
+    }
+
+    .liked-page .restaurants-list .card {
+        background-color: #F2D398;
+    }
+
+    .liked-page .restaurants-list .card-image {
+        position: relative;
+        width: 100%;
+    }
+    
+    .liked-page .restaurants-list .label {
+        position: absolute;
+        top: 10px;
+        left: 0;
+        width: 150px;
+        height: 50px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        background-color: #ffbd69;
+        text-align: center;
+        color: #000000;
+        font-weight: 600;
+    }
+
+    .liked-page .restaurants-list .card-text {
+        text-align: left;
+        width: auto;
+        padding: 0 20px;
+    }
+
+    .liked-page .restaurants-list .card-text a.resto-name {
+        padding: 15px 10px;
+        display: block;
+        text-align: center;
+        color: #c70039;
+        font-weight: 800;
+    }
+
+    .liked-page .restaurants-list .card-footer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, auto);
+    }
+
+    .liked-page .restaurants-list .card-footer .btn-add {
+        background-color: transparent;
+        color: #000000;
+        padding: 15px 5px;
+        margin: 15px;
+        border: none;
+    }
+
+    .liked-page .restaurants-list .card-footer .btn-love {
+        background-color: transparent;
+        color: #000000;
+        padding: 15px 5px;
+        margin: 15px;
+        border: none;
+    }
+
+    .liked-page .restaurants-list .card-footer i {
+        font-size: 19px;
+    }
+
+    /*DETAIL PAGE*/
+    .restaurant-banner .title-banner {
+        margin: 0;
+        font-family: 'Nerko One', cursive;
+        text-align: center;
+        font-size: 3em;
+    }
+
+    .restaurant-banner .subtitle-banner {
+        margin: 0;
+        font-family: 'Dancing Script', cursive;
+        text-align: center;
+        font-size: 2em;
+    }
+
+    .restaurant-detail {
+        padding: 20px 0px;
+    }
+
+    .restaurant-detail .restaurant-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, auto);
+        justify-items: center;
+        position: relative;
+        top: 0;
+        left: 0;
+        z-index: 2;
+    }
+
+    .restaurant-grid .image-tape {
+        width: 90%;
+        position: relative;
+        top: 50%;
+    }
+
+    .restaurant-grid .restaurant-name-centered {
+        position: absolute;
+        top: 60%;
+        z-index: 4;
+        color: #F2D398;
+        font-size: 35px;
+    }
+
+    .restaurant-detail .restaurant-poster {
+        width: 90%;
+        left: 5%;
+        position: relative;
+    }
+
+    .restaurant-detail .hero-image {
+        width: 90%;
+        left: 5%;
+        position: relative;
+    }
+
+    .restaurant-detail .restaurant-poster {
+        width: 90%;
+        left: 5%;
+        position: relative;
+    }
+
+    .restaurant-detail .restaurant-name {
+        padding: 15px 10px;
+        display: block;
+        text-align: center;
+        color: #c70039;
+        font-weight: 800;
+        font-size: 40px;
+        font-family: 'Nerko One', cursive;
+    }
+
+    .restaurant-detail .title-banner {
+        margin: 0;
+        font-family: 'Nerko One', cursive;
+        text-align: center;
+        font-size: 3em;
+    }
+
+    .restaurant-detail .subtitle-banner {
+        margin: 0;
+        font-family: 'Dancing Script', cursive;
+        text-align: center;
+        font-size: 1.75em;
+    }
+
+    .restaurant-detail .restaurant-info {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, auto);
+        padding: 0px 15px;
+    }
+
+    .restaurant-detail .restaurant-rating {
+        font-size: 1em;
+    }
+
+    .restaurant-info .info-first-grid {
+        margin-right: 15px;
+    }
+
+    .restaurant-info .info-second-grid {
+        margin-left: 15px;
+    }
+
+    .restaurant-detail .restaurant-menu {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, auto);
+        padding: 0px 5px;
+    }
+
+    .restaurant-detail h3.title {
+        text-align: center;
+        font-size: 30px;
+        font-family: 'Nerko One', cursive;
+    }
+
+    .restaurant-detail .restaurant-menu .menu-drinks,
+    .restaurant-detail .restaurant-menu .menu-foods {
+        display: inline-block;
+    }
+
+    .restaurant-detail .restaurant-menu .menu-drinks .list-drinks li.drink-name, 
+    .restaurant-detail .restaurant-menu .menu-foods .list-foods li.food-name{
+        color: #99012c;
+        font-size: 20px;
+        font-weight: 600;
+        margin: 0.5em 0;
+    }
+
+    .list-foods .detail-food, .list-drinks .detail-drink {
+        color: #000000;
+        font-weight: 400;
+        display: block;
+        margin: 0.2em 0 1em;
+    }
+
+    .restaurant-detail .restaurant-review {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, auto);
+        padding: 0px 10px;
+    }
+
+    .form-review {
+        padding-bottom: 20px;
+    }
+
+    .form-review .form-group {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .form-review .card {
+        padding: 10px 50px;
+        margin: 80px 30px;
+        background-color: whitesmoke;
+    }
+
+    .form-review .card input {
+        background-color: #F2D398;
+        color: #000;
+        border: none;
+        padding: 5px 10px;
+        margin: 10px 0px;
+        width: 90%;
+        height: 20px;
+        border-radius: 5px;
+    }
+
+    .form-review .card button {
+        background-color: #c70039;
+        color: #F2D398;
+        padding: 16px 0;
+        width: 40%;
+        border-radius: 5px;
+        border: 0;
+        position: relative;
+        left: 30%;
+        right: 30%;
+    }
+}
+
+
+/* 5. SMALL DEVICES (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    .app-bar {
+    padding: 8px 16px;
+    background-color: #bf1722;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(1, auto);
+    gap: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    }
+    
+    .app-bar .app-bar-menu {
+    display: flex;
+    justify-content: center;
+    }
+    
+    .app-bar .app-bar-menu button {
+    background-color: transparent;
+    border: none;
+    font-size: 22px;
+    padding: 10px 15px;
+    cursor: pointer;
+    }
+    
+    .app-bar .app-bar-brand {
+    text-align: center;
+    }
+    
+    .app-bar .app-bar-brand h1 {
+    color: #db0000;
+    text-transform: uppercase;
+    font-size: 22px;
+    user-select: none;
+    text-align: center;
+    }
+
+    .app-bar-brand .image-brand {
+        height: 50px;
+    }
+    
+    .app-bar .app-bar-navigation {
+    position: absolute;
+    top: 70px;
+    left: -330px;
+    width: 300px;
+    transition: all 0.3s;
+    padding: 8px;
+    height: 100vh;
+    background-color: #F2D398;
+    overflow: hidden;
+    }
+    
+    .app-bar .app-bar-navigation.open {
+    left: 0;
+    top: 70px;
+    }
+
+    .app-bar .app-bar-navigation ul {
+        padding-inline-start: 0;
+    }
+    
+    .app-bar .app-bar-navigation ul li a {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    padding: 15px 8px;
+    margin-bottom: 5px;
+    width: 100%;
+    }
+    
+    /* Hero Image Section*/
+    .hero-section {
+        width: 100vw;
+        height: 50vh;
+        position: relative;
+    }
+
+    .hero-section img.cover {
+        height: 50vh;
+        object-fit: cover;
+        width: 100%;
+        position: absolute;
+    }
+
+    .hero-section .overlay-shadow {
+        width: 100%;
+        height: 20vh;
+        background-color: black;
+        background: linear-gradient(to top,  rgb(26, 26, 26) 0%, rgba(233, 233, 233, 0) 100%);
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0%;
+    }
+
+    .hero-section .title-hero {
+        color: rgb(254, 255, 211);
+        position: absolute;
+        left: 0.8em;
+        bottom: 1.8em;
+        font-size: 1.75em;
+    }
+
+    .hero-section .span-title {
+        color: rgb(254, 255, 211);
+        position: absolute;
+        left: 1.6em;
+        bottom: 2em;
+        font-size: 1em;
+    }
+
+    /* RESTAURANT LIST SECTION*/
+    .restaurants-section {
+        width: 100vw;
+        height: auto;
+    }
+
+    .restaurants-section .section-heading {
+        margin-top: 30px;
+        font-size: 20px;
+    }
+
+    .restaurants-section .restaurants-list {
+        margin: 10px 30px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, auto);
+    }
+
+    .restaurants-section .restaurants-list .card {
+        background-color: #F2D398;
+    }
+
+    .restaurants-section .restaurants-list .card-image {
+        position: relative;
+        width: 100%;
+    }
+    
+    .restaurants-section .restaurants-list .label {
+        position: absolute;
+        top: 10px;
+        left: 0;
+        width: 150px;
+        height: 50px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        background-color: #ffbd69;
+        text-align: center;
+        color: #000000;
+        font-weight: 600;
+    }
+
+    .restaurants-section .restaurants-list .card-text {
+        text-align: left;
+        width: auto;
+        padding: 0 20px;
+    }
+
+    .restaurants-section .restaurants-list .card-text a.resto-name {
+        padding: 15px 10px;
+        display: block;
+        text-align: center;
+        color: #c70039;
+        font-weight: 800;
+    }
+
+    .restaurants-section .restaurants-list .card-footer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, auto);
+    }
+
+    .restaurants-section .restaurants-list .card-footer .btn-add {
+        background-color: transparent;
+        color: #000000;
+        padding: 15px 5px;
+        margin: 15px;
+        border: none;
+    }
+
+    .restaurants-section .restaurants-list .card-footer .btn-love {
+        background-color: transparent;
+        color: #000000;
+        padding: 15px 5px;
+        margin: 15px;
+        border: none;
+    }
+
+    .restaurants-section .restaurants-list .card-footer i {
+        font-size: 19px;
+    }
+
+    /*Footer Custom*/
+    .footer {
+        height: auto;
+        text-align: center;
+        background-color: #111d5e;
+    }
+    
+    .footer p {
+        margin-block-start: 0;
+        margin-block-end: 0;
+        padding: 1.5em 0;
+        color: wheat;
+    }
+
+    /* Favourite Restaurant page*/
+    .liked-page .content-heading {
+        color: #bf1722;
+        font-size: 1.5rem;
+        padding: 0.4em 2em;
+        font-weight: 700;
+        margin-top: 2em;
+        font-family: 'Dancing Script', cursive;
+        text-align: center;
+    }
+
+    .liked-page .restaurants-list {
+        margin: 10px 30px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, auto);
+    }
+
+    .liked-page .restaurants-list .card {
+        background-color: #F2D398;
+    }
+
+    .liked-page .restaurants-list .card-image {
+        position: relative;
+        width: 100%;
+    }
+    
+    .liked-page .restaurants-list .label {
+        position: absolute;
+        top: 10px;
+        left: 0;
+        width: 150px;
+        height: 50px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        background-color: #ffbd69;
+        text-align: center;
+        color: #000000;
+        font-weight: 600;
+    }
+
+    .liked-page .restaurants-list .card-text {
+        text-align: left;
+        width: auto;
+        padding: 0 20px;
+    }
+
+    .liked-page .restaurants-list .card-text a.resto-name {
+        padding: 15px 10px;
+        display: block;
+        text-align: center;
+        color: #c70039;
+        font-weight: 800;
+    }
+
+    .liked-page .restaurants-list .card-footer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, auto);
+    }
+
+    .liked-page .restaurants-list .card-footer .btn-add {
+        background-color: transparent;
+        color: #000000;
+        padding: 15px 5px;
+        margin: 15px;
+        border: none;
+    }
+
+    .liked-page .restaurants-list .card-footer .btn-love {
+        background-color: transparent;
+        color: #000000;
+        padding: 15px 5px;
+        margin: 15px;
+        border: none;
+    }
+
+    .liked-page .restaurants-list .card-footer i {
+        font-size: 19px;
+    }
+
+    /*DETAIL PAGE*/
+    .restaurant-banner .title-banner {
+        margin: 0;
+        font-family: 'Nerko One', cursive;
+        text-align: center;
+        font-size: 3em;
+    }
+
+    .restaurant-banner .subtitle-banner {
+        margin: 0;
+        font-family: 'Dancing Script', cursive;
+        text-align: center;
+        font-size: 2em;
+    }
+
+    .restaurant-detail {
+        padding: 20px 0px;
+    }
+
+    .restaurant-detail .restaurant-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, auto);
+        justify-items: center;
+        position: relative;
+        top: 0;
+        left: 0;
+        z-index: 2;
+    }
+
+    .restaurant-grid .image-tape {
+        width: 90%;
+        position: relative;
+        top: 50%;
+    }
+
+    .restaurant-grid .restaurant-name-centered {
+        position: absolute;
+        top: 60%;
+        z-index: 4;
+        color: #F2D398;
+        font-size: 35px;
+    }
+
+    .restaurant-detail .restaurant-poster {
+        width: 90%;
+        left: 5%;
+        position: relative;
+    }
+
+    .restaurant-detail .hero-image {
+        width: 90%;
+        left: 5%;
+        position: relative;
+    }
+
+    .restaurant-detail .restaurant-poster {
+        width: 90%;
+        left: 5%;
+        position: relative;
+    }
+
+    .restaurant-detail .restaurant-name {
+        padding: 15px 10px;
+        display: block;
+        text-align: center;
+        color: #c70039;
+        font-weight: 800;
+        font-size: 40px;
+        font-family: 'Nerko One', cursive;
+    }
+
+    .restaurant-detail .title-banner {
+        margin: 0;
+        font-family: 'Nerko One', cursive;
+        text-align: center;
+        font-size: 3em;
+    }
+
+    .restaurant-detail .subtitle-banner {
+        margin: 0;
+        font-family: 'Dancing Script', cursive;
+        text-align: center;
+        font-size: 1.75em;
+    }
+
+    .restaurant-detail .restaurant-info {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, auto);
+        padding: 0px 15px;
+    }
+
+    .restaurant-detail .restaurant-rating {
+        font-size: 1em;
+    }
+
+    .restaurant-info .info-first-grid {
+        margin-right: 15px;
+    }
+
+    .restaurant-info .info-second-grid {
+        margin-left: 15px;
+    }
+
+    .restaurant-detail .restaurant-menu {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, auto);
+        padding: 0px 5px;
+    }
+
+    .restaurant-detail h3.title {
+        text-align: center;
+        font-size: 30px;
+        font-family: 'Nerko One', cursive;
+    }
+
+    .restaurant-detail .restaurant-menu .menu-drinks,
+    .restaurant-detail .restaurant-menu .menu-foods {
+        display: inline-block;
+    }
+
+    .restaurant-detail .restaurant-menu .menu-drinks .list-drinks li.drink-name, 
+    .restaurant-detail .restaurant-menu .menu-foods .list-foods li.food-name{
+        color: #99012c;
+        font-size: 20px;
+        font-weight: 600;
+        margin: 0.2em 0;
+    }
+
+    .list-foods .detail-food, .list-drinks .detail-drink {
+        color: #000000;
+        font-weight: 400;
+        display: block;
+        margin: 0.2em 0;
+    }
+
+    .restaurant-detail .restaurant-review {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, auto);
+        padding: 0px 10px;
+    }
+
+    .form-review {
+        padding-bottom: 20px;
+    }
+
+    .form-review .form-group {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .form-review .card {
+        padding: 10px 50px;
+        margin: 80px 30px;
+        background-color: whitesmoke;
+    }
+
+    .form-review .card input {
+        background-color: #F2D398;
+        color: #000;
+        border: none;
+        padding: 5px 10px;
+        margin: 10px 0px;
+        width: 90%;
+        height: 20px;
+        border-radius: 5px;
+    }
+
+    .form-review .card button {
+        background-color: #c70039;
+        color: #F2D398;
+        padding: 16px 0;
+        width: 40%;
+        border-radius: 5px;
+        border: 0;
+        position: relative;
+        left: 30%;
+        right: 30%;
+    }
+}
+
+
+/* 6. TABLET VIEW CUSTOM STYLE*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+    /*Navbar*/
+    .app-bar {
+        /* grid-template-columns: 1fr auto; */
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: repeat(1, auto);
+        padding: 8px 0px;
+        background-color: #bf1722;
+    }
+
+    .app-bar-brand {
+        display: inline;
+    }
+   
+    .app-bar .app-bar-brand h1 {
+        color: beige;
+        font-size: 1.5rem;
+        padding: 0.4em 2em;
+        font-weight: 700;
+    }
+
+    .app-bar .app-bar-brand .image-brand {
+        height: 100px;
+        display: inline-block;
+        position: absolute;
+        top: 2vh;
+        left: 4vw;
+        background-color: #bf1722;
+        padding: 10px;
+        z-index: 44;
+    }
+   
+    .app-bar .app-bar-menu {
+        display: none;
+    }
+   
+    .app-bar .app-bar-navigation {
+        position: static;
+        width: 100%;
+        text-align: end;
+    }
+
+    .app-bar .app-bar-navigation ul {
+        position: relative;
+        top: 0;
+        bottom: 0;
+        padding-right: 1em;
+    }
+   
+    .app-bar .app-bar-navigation ul li {
+        display: inline-block;
+    }
+   
+    .app-bar .app-bar-navigation ul li a {
+        display: inline-block;
+        width: 130px;
+        text-align: center;
+        margin: 0;
+        color: beige;
+        font-size: 1.25rem;
+        padding: 12px 0;
+    }
+
+    /*Hero Image*/
+    .hero-section{
+        object-fit: cover;
+        height: 50vh;
+        width: 100vw;
+        position: relative;
+    }
+
+    .hero-section img.cover{
+        height: 50vh;
+        object-fit: cover;
+        width: 100%;
+        position: absolute;
+    }
+
+    .hero-section .overlay-shadow {
+        width: 100%;
+        height: 20vh;
+        background-color: black;
+        background: linear-gradient(to top,  rgb(26, 26, 26) 0%, rgba(233, 233, 233, 0) 100%);
+        position: absolute;
+        left: 0;
+        bottom: 0%;
+    }
+
+    .hero-section .title-hero {
+        color: rgb(254, 255, 211);
+        position: absolute;
+        left: 1em;
+        bottom: 1em;
+        font-size: 3em;
+    }
+
+    .hero-section .span-title {
+        color: rgb(254, 255, 211);
+        position: absolute;
+        left: 2.25em;
+        bottom: 1em;
+        font-size: 1.5em;
+    }
+
+    /* Restaurant Cardlist*/
+    .restaurants-section .section-heading {
+        margin-top: 2em;
+        font-family: 'Dancing Script', cursive;
+        text-align: center;
+        font-size: 2em;
+    }
+
+    .restaurants-section .restaurants-list {
+        margin: 10px 50px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+    }
+
+    .restaurants-section .restaurants-list .card {
+        background-color: #F2D398;
+    }
+
+    .restaurants-section .restaurants-list .card-image {
+        position: relative;
+        width: 100%;
+    }
+
+    .restaurants-section .restaurants-list .card-image .cover-resto {
+        object-fit: cover;
+        height: 250px;
+    }
+
+    .restaurants-section .restaurants-list .card-image .label {
+        position: absolute;
+        top: 10px;
+        left: 0;
+        width: 150px;
+        height: 50px;
+        background-color: #ffbd69;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+        text-align: center;
+        color: #000000;
+        font-weight: 700;
+    }
+
+    .restaurants-list .card-text {
+        padding: 0 20px;
+    }
+
+    .restaurants-section .restaurants-list .card-text a.resto-name {
+        padding: 15px 10px;
+        display: block;
+        text-align: center;
+        color: #c70039;
+        font-weight: 800;
+    }
+
+    .restaurants-section .restaurants-list .card-footer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, auto);
+    }
+
+    .restaurants-section .restaurants-list .card-footer .btn-add {
+        background-color: transparent;
+        color: #000000;
+        padding: 15px 5px;
+        margin: 15px;
+        border: none;
+    }
+
+    .restaurants-section .restaurants-list .card-footer .btn-love {
+        background-color: transparent;
+        color: #000000;
+        padding: 15px 5px;
+        margin: 15px;
+        border: none;
+    }
+
+    .restaurants-section .restaurants-list .card-footer i {
+        font-size: 19px;
+    }
+
+    /* footer */
+    .footer {
+        height: auto;
+        align-self: start;
+        background-color: #111d5e;
+    }
+
+    .footer p {
+        margin-block-start: 0;
+        margin-block-end: 0;
+        padding: 1.5em 0;
+        margin: 0 3.5em;
+        color: wheat;
+    }
+
+    /*Favourite Restaurant page*/
+    .liked-page .content-heading {
+        color: #bf1722;
+        font-size: 2rem;
+        padding: 0.4em 2em;
+        font-weight: 700;
+        margin-top: 2em;
+        font-family: 'Dancing Script', cursive;
+        text-align: center;
+    }
+
+    .restaurants-list {
+        margin: 10px 50px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+    }
+
+    .restaurants-list .card {
+        background-color: #F2D398;
+    }
+
+    .restaurants-list .card-image {
+        position: relative;
+        width: 100%;
+    }
+
+    .restaurants-list .card-image .cover-resto {
+        object-fit: cover;
+        height: 250px;
+    }
+
+    .restaurants-list .card-image .label {
+        position: absolute;
+        top: 10px;
+        left: 0;
+        width: 150px;
+        height: 50px;
+        background-color: #ffbd69;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+        text-align: center;
+        color: #000000;
+        font-weight: 700;
+    }
+
+    .restaurants-list .card-text {
+        padding: 0 20px;
+    }
+
+    .restaurants-list .card-text a.resto-name {
+        padding: 15px 10px;
+        display: block;
+        text-align: center;
+        color: #c70039;
+        font-weight: 800;
+    }
+
+    .restaurants-list .card-footer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, auto);
+    }
+
+    .restaurants-list .card-footer .btn-add {
+        background-color: transparent;
+        color: #000000;
+        padding: 15px 5px;
+        margin: 15px;
+        border: none;
+    }
+
+    .restaurants-list .card-footer .btn-love {
+        background-color: transparent;
+        color: #000000;
+        padding: 15px 5px;
+        margin: 15px;
+        border: none;
+    }
+
+    .restaurants-list .card-footer i {
+        font-size: 19px;
+    }
+
+    .restaurants-list .resto-rating {
+        color: #99012c;
+    }
+
+    /*Detail Restaurant*/
+    .restaurant-banner .title-banner {
+        margin: 0;
+        font-family: 'Nerko One', cursive;
+        text-align: center;
+        font-size: 4em;
+    }
+
+    .restaurant-banner .subtitle-banner {
+        margin: 0;
+        font-family: 'Dancing Script', cursive;
+        text-align: center;
+        font-size: 2em;
+    }
+
+    .restaurant-detail {
+        padding: 0px 40px 20px;
+    }
+
+    .restaurant-detail .restaurant-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, auto);
+        justify-items: center;
+        position: relative;
+        top: 0;
+        left: 0;
+        z-index: 2;
+    }
+
+    .restaurant-grid .image-tape {
+        width: 40vw;
+        position: relative;
+        top: 70%;
+    }
+
+    .restaurant-grid .restaurant-name-centered {
+        position: absolute;
+        top: 85%;
+        z-index: 4;
+        color: #F2D398;
+        font-size: 25px;
+    }
+
+    .restaurant-detail .restaurant-poster {
+        width: 90%;
+        left: 5%;
+        position: relative;
+    }
+
+    .restaurant-detail .hero-image {
+        width: 90%;
+        left: 5%;
+        position: relative;
+    }
+
+    .restaurant-detail .title-banner {
+        margin: 0;
+        font-family: 'Nerko One', cursive;
+        text-align: center;
+        font-size: 3em;
+    }
+
+    .restaurant-detail .subtitle-banner {
+        margin: 0;
+        font-family: 'Dancing Script', cursive;
+        text-align: center;
+        font-size: 2em;
+    }
+
+    .restaurant-detail .restaurant-poster {
+        width: 89%;
+        position: relative;
+        left: 5%;
+    }
+    .restaurant-detail .restaurant-info {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, auto);
+        padding: 0px 50px;
+    }
+
+    .restaurant-detail .restaurant-name {
+        padding: 15px 10px;
+        display: block;
+        text-align: center;
+        color: #c70039;
+        font-weight: 800;
+        font-size: 40px;
+        font-family: 'Nerko One', cursive;
+    }
+
+    .restaurant-detail .restaurant-rating {
+        font-size: 1em;
+    }
+
+    .restaurant-info .info-first-grid {
+        margin-left: 5%;
+    }
+
+    .restaurant-info .info-second-grid {
+        margin-left: 5%;
+    }
+
+    .restaurant-detail .restaurant-menu {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, auto);
+        padding: 0px 20px;
+    }
+
+    .restaurant-detail h3.title {
+        text-align: center;
+        font-size: 30px;
+        font-family: 'Nerko One', cursive;
+    }
+
+    .restaurant-detail .restaurant-menu .menu-drinks, 
+    .restaurant-detail .restaurant-menu .menu-foods {
+        display: inline-block;
+    }
+
+    .restaurant-detail .restaurant-menu .menu-drinks .list-drinks li.drink-name, 
+    .restaurant-detail .restaurant-menu .menu-foods .list-foods li.food-name{
+        color: #99012c;
+        font-size: 20px;
+        font-weight: 600;
+        margin: 0.2em 0;
+    }
+
+    .list-foods .detail-food, .list-drinks .detail-drink {
+        color: #000000;
+        font-weight: 400;
+        display: block;
+        margin: 0.2em 0;
+    }
+
+    .restaurant-detail .restaurant-review {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, auto);
+        padding: 0px 20px;
+    }
+
+    .form-review {
+        padding-bottom: 20px;
+    }
+
+    .form-review .form-group {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .form-review .card {
+        padding: 10px 30px;
+        margin: 80px 30px;
+        background-color: whitesmoke;
+    }
+
+    .form-review .card input {
+        background-color: #F2D398;
+        color: #000;
+        border: none;
+        padding: 5px 10px;
+        margin: 10px 0px;
+        border-radius: 5px;
+        width: 90%;
+        height: 20px;
+    }
+
+    .form-review .card button {
+        background-color: #c70039;
+        color: #F2D398;
+        width: 40%;
+        padding: 16px 0;
+        border-radius: 5px;
+        border: 0;
+        position: relative;
+        left: 30%;
+        right: 30%;
+    }
+}
+
+
+/* 7. RESPONSIVE NAVBAR DISPLAY CUSTOM STYLE*/
+@media only screen and (max-width: 575.98px) { 
+    .navbar.responsive {
+        position: absolute;
+        display: inline;
+    }
+    .navbar.responsive .toggle-collapse {
+        display: inline-block;
+        position: relative;
+        width: auto;
+        left: 25vw;
+        background-color: transparent;
+        border: transparent;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+    .navbar.responsive .toggle-collapse i {
+        right: 0;
+        top: 0;
+        bottom: 0;
+        color: white;
+        font-size: 25px;
+        padding: 10px;
+    }
+
+    .navbar.responsive .nav-menu {
+        display: block;
+        width: 100%;
+        position: relative;
+        top: 30%;
+        background-color: #99012c;
+        transition: all 499ms ease;
+    }
+
+    .navbar.responsive .nav-menu .navbar-nav {
+        margin: auto;
+        padding: 0;
+        display: block;
+        text-align: left;
+    }
+
+    .navbar.responsive .navbar-nav li{
+        margin: 0;
+        display: block;
+        padding: 0.35em;
+    }
+   
+    .navbar.responsive .navbar-nav a{
+        display: block;
+        color: beige;
+        font-size: 1.2rem;
+        padding: 11px 0;
+        margin: 0 5px;
+    }
+}
+
+
+/* 8. DESKTOP VIEW CUSTOM STYLE*/
+@media only screen and (min-width: 992px) {
+    /*TAMBAHAN DICODING*/
+    .app-bar {
+        display: grid;
+        grid-template-columns: 1fr 5fr;
+        grid-template-rows: repeat(1, auto);
+        padding: 5px 32px;
+        background-color: #bf1722;
+    }
+   
+    .app-bar-brand {
+        display: inline;
+    }
+
+    .app-bar .app-bar-brand h1 {
+        color: beige;
+        font-size: 1.5rem;
+        padding: 0.4em 2em 0.4em 0em;
+        font-weight: 700;
+        margin: 0.25em 0;
+        display: inline-block;
+    }
+
+    .app-bar .app-bar-brand .image-brand {
+        height: 100px;
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        background-color: #bf1722;
+        padding: 10px;
+        z-index: 44;
+    }
+   
+    .app-bar .app-bar-menu {
+        display: none;
+    }
+   
+    .app-bar .app-bar-navigation {
+        position: static;
+        width: 100%;
+    }
+
+    .app-bar .app-bar-navigation ul {
+        position: relative;
+        top: 0;
+        bottom: 0;
+        text-align: end;
+        margin: 0.25em 0;
+    }
+   
+    .app-bar .app-bar-navigation ul li {
+        display: inline-block;
+    }
+   
+    .app-bar .app-bar-navigation ul li a {
+        display: inline-block;
+        width: 130px;
+        text-align: center;
+        margin: 0;
+        color: beige;
+        font-size: 1.25rem;
+        padding: 12px 0;
+    }
+
+    /*HERO IMAGE SECTION*/
+    .hero-section {
+        width: 100vw;
+        height: 75vh;
+        position: relative;
+    }
+    .hero-section img.cover {
+        object-fit: cover;
+        height: 75vh;
+        width: 100%;
+        position: absolute;
+    }
+
+    .hero-section .overlay-shadow {
+        width: 100%;
+        height: 40vh;
+        background-color: black;
+        background: linear-gradient(to top,  rgb(26, 26, 26) 0%, rgba(233, 233, 233, 0) 100%);
+        position: absolute;
+        left: 0;
+        bottom: 0%;
+    }
+
+    .hero-section .title-hero {
+        color: rgb(254, 255, 211);
+        position: absolute;
+        left: 1em;
+        bottom: 1em;
+        font-size: 3em;
+    }
+
+    .hero-section .span-title {
+        color: rgb(254, 255, 211);
+        position: absolute;
+        left: 2.25em;
+        bottom: 1em;
+        font-size: 2em;
+        margin: 0;
+        font-family: 'Dancing Script', cursive;
+    }
+
+    /*RESTAURANT LIST SECTION*/
+    .restaurants-section {
+        width: 100vw;
+        height: auto;
+        margin-top: 40px;
+    }
+
+    .restaurants-section .section-heading {
+        margin: 0;
+        font-family: 'Dancing Script', cursive;
+        text-align: center;
+        font-size: 2em;
+    }
+
+    .restaurants-list {
+        margin: 50px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(auto, auto);
+    }
+
+    .restaurants-list .card {
+        background-color: #F2D398;
+        margin: 20px 15px;
+    }
+
+    .restaurants-list .card-text {
+        padding: 0 20px;
+    }
+    
+    .restaurants-list card-item {
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
+    .restaurants-section .restaurants-list .card-image {
+        position: relative;
+        width: 100%;
+    }
+
+    .restaurants-section .restaurants-list .card-image .cover-resto {
+        object-fit: cover;
+        height: 250px;
+    }
+
+    .restaurants-section .restaurants-list .label {
+        position: absolute;
+        top: 10px;
+        left: 0;
+        width: 150px;
+        height: 50px;
+        background-color: #ffbd69;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+        text-align: center;
+        color: #000000;
+        font-weight: 700;
+    }
+
+    .restaurants-section .restaurants-list .card-text a.resto-name {
+        padding: 15px 10px;
+        display: block;
+        text-align: center;
+        color: #c70039;
+        font-weight: 800;
+    }
+
+    .restaurants-section .restaurants-list .card-footer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, auto);
+    }
+
+    .restaurants-section .restaurants-list .card-footer .btn-add {
+        background-color: transparent;
+        color: #000000;
+        padding: 15px 5px;
+        margin: 15px;
+        border: none;
+    }
+
+    .restaurants-section .restaurants-list .card-footer .btn-love {
+        background-color: transparent;
+        color: #000000;
+        padding: 15px 5px;
+        margin: 15px;
+        border: none;
+    }
+
+    .restaurants-section .restaurants-list .card-footer i {
+        font-size: 19px;
+    }
+
+    /* RESTAURANT DETAIL */
+    .restaurant-banner .title-banner {
+        margin: 0;
+        padding-top: 6vh;
+        font-family: 'Nerko One', cursive;
+        text-align: center;
+        font-size: 4em;
+    }
+
+    .restaurant-banner .subtitle-banner {
+        margin: 0;
+        font-family: 'Dancing Script', cursive;
+        text-align: center;
+        font-size: 2em;
+    }
+
+    .restaurant-detail {
+        padding: 20px 40px;
+    }
+
+    .restaurant-detail .restaurant-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, auto);
+        justify-items: center;
+        position: relative;
+        top: 0;
+        left: 0;
+        z-index: 2;
+    }
+
+    .restaurant-grid .image-tape {
+        height: 13vh;
+        position: relative;
+        top: 50%;
+    }
+
+    .restaurant-grid .restaurant-name-centered {
+        position: absolute;
+        top: 65%;
+        z-index: 4;
+        color: #F2D398;
+        font-size: 40px;
+    }
+
+    .restaurant-detail .restaurant-poster {
+        width: 90%;
+        left: 5%;
+        position: relative;
+    }
+
+    .restaurant-detail .hero-image {
+        width: 90%;
+        left: 5%;
+        position: relative;
+    }
+
+    .restaurant-detail .restaurant-name {
+        padding: 15px 10px;
+        display: block;
+        text-align: center;
+        color: #c70039;
+        font-weight: 800;
+        font-size: 40px;
+        font-family: 'Nerko One', cursive;
+    }
+
+    .restaurant-detail .title-banner {
+        margin: 0;
+        font-family: 'Nerko One', cursive;
+        text-align: center;
+        font-size: 3em;
+    }
+
+    .restaurant-detail .subtitle-banner {
+        margin: 0;
+        font-family: 'Dancing Script', cursive;
+        text-align: center;
+        font-size: 2em;
+    }
+
+    .restaurant-detail .restaurant-info {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, auto);
+        padding: 0px 120px;
+    }
+
+    .restaurant-detail .restaurant-rating {
+        font-size: 1em;
+    }
+
+    .restaurant-info .info-first-grid {
+        margin-left: 50px;
+    }
+
+    .restaurant-info .info-second-grid {
+        margin-left: 50px;
+    }
+
+    .restaurant-detail .restaurant-menu {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, auto);
+        padding: 0px 70px;
+    }
+
+    .restaurant-detail h3.title {
+        text-align: center;
+        font-size: 30px;
+        font-family: 'Nerko One', cursive;
+    }
+
+    .restaurant-detail .restaurant-menu .menu-drinks, 
+    .restaurant-detail .restaurant-menu .menu-foods {
+        display: inline-block;
+    }
+
+    .restaurant-detail .restaurant-menu .menu-drinks .list-drinks li.drink-name, 
+    .restaurant-detail .restaurant-menu .menu-foods .list-foods li.food-name{
+        color: #99012c;
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .list-foods .detail-food, .list-drinks .detail-drink {
+        color: #000000;
+        font-weight: 400;
+        display: block;
+        margin: 0.3em 0;
+    }
+
+    .restaurant-detail .restaurant-review {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, auto);
+        padding: 0px 70px;
+    }
+
+    .form-review {
+        padding-bottom: 20px;
+    }
+
+    .form-review .card {
+        padding: 10px 50px;
+        margin: 80px 30px;
+        background-color: whitesmoke;
+    }
+
+    .form-review .form-group {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .form-review .card input {
+        background-color: #F2D398;
+        color: #000;
+        border: none;
+        padding: 5px 10px;
+        margin: 10px 0px;
+        width: 90%;
+        height: 20px;
+        border-radius: 5px;
+    }
+
+    .form-review .card button {
+        background-color: #c70039;
+        color: #F2D398;
+        padding: 16px 0;
+        width: 20%;
+        border-radius: 5px;
+        border: 0;
+        position: relative;
+        left: 40%;
+        right: 40%;
+    }
+
+    /*FOOTER SECTION*/
+    .footer {
+        height: auto;
+        align-self: start;
+        background-color: #111d5e;
+    }
+
+    .footer p {
+        margin-block-start: 0;
+        margin-block-end: 0;
+        padding: 1.5em 0;
+        margin: 0 3.5em;
+        color: wheat;
+    }
+
+    /*Favaourite Restaurant page*/
+    .liked-page .content-heading {
+        color: #bf1722;
+        font-size: 2.5rem;
+        padding: 0.4em 2em 0em 2em;
+        font-weight: 700;
+        margin-top: 2em;
+        font-family: 'Dancing Script', cursive;
+        text-align: center;
+    }
+
+    .restaurants-list .card-image {
+        position: relative;
+        width: 100%;
+    }
+
+    .restaurants-list .card-image .cover-resto {
+        object-fit: cover;
+        height: 250px;
+    }
+
+    .restaurants-list .card-image .label {
+        position: absolute;
+        top: 10px;
+        left: 0;
+        width: 150px;
+        height: 50px;
+        background-color: #ffbd69;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+        text-align: center;
+        color: #000000;
+        font-weight: 700;
+    }
+
+    .restaurants-list .card-text {
+        padding: 0 20px;
+    }
+
+    .restaurants-list .card-text a.resto-name {
+        padding: 15px 10px;
+        display: block;
+        text-align: center;
+        color: #c70039;
+        font-weight: 800;
+    }
+
+    .restaurants-list .card-footer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, auto);
+    }
+
+    .restaurants-list .card-footer .btn-add {
+        background-color: transparent;
+        color: #000000;
+        padding: 15px 5px;
+        margin: 15px;
+        border: none;
+    }
+
+    .card-footer .btn-love {
+        background-color: transparent;
+        color: #000000;
+        padding: 15px 5px;
+        margin: 15px;
+        border: none;
+    }
+
+    .restaurants-list .card-footer i {
+        font-size: 19px;
+    }
+
+}
+
+
+/* 9. HELPER FOCUS ACCESSIBILITY*/
+a[tabindex="0"]:focus {
+    outline: 1px dashed orange;
+}
+
+h1[tabindex="0"]:focus {
+    outline: 1px dashed orange;
+}
+
+h2[tabindex="0"]:focus {
+    outline: 1px dashed orange;
+}
+
+h3[tabindex="0"]:focus {
+    outline: 1px dashed orange;
+}
+
+h5[tabindex="0"]:focus {
+    outline: 1px dashed orange;
+}
+
+p[tabindex="0"]:focus {
+    outline: 1px dashed orange;
+}
+
+p[tabindex="0"]:focus {
+    outline: 1px dashed orange;
+}
+
+p[tabindex="0"]:focus {
+    outline: 1px dashed orange;
+}
+
+span[tabindex="0"]:focus {
+    outline: 1px dashed orange;
+}
+
+button[tabindex="0"]:focus {
+    outline: 1px dashed orange;
+}
+
+img[tabindex="0"]:focus {
+    outline: 1px dashed orange;
+}
+
+div[tabindex="0"]:focus {
+    outline: 1px dashed orange;
+}
